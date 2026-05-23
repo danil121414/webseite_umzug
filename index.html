@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Umzugsservice – Schnell, Stark, Zuverlässig</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+      color: #222;
+      background: #f5f5f5;
+    }
+    header {
+      background: #1f2933;
+      color: #fff;
+      padding: 20px 15px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    header .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    header h1 { font-size: 1.4rem; }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 0.95rem;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    .hero {
+      background: linear-gradient(135deg, #2563eb, #1d4ed8);
+      color: #fff;
+      padding: 60px 15px;
+    }
+    .hero .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.5fr);
+      gap: 30px;
+      align-items: center;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+    .hero p { margin-bottom: 15px; }
+    .hero ul { margin-left: 18px; margin-bottom: 20px; }
+    .btn {
+      display: inline-block;
+      padding: 10px 18px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      cursor: pointer;
+    }
+    .btn-primary {
+      background: #facc15;
+      color: #1f2933;
+    }
+    .btn-primary:hover { background: #eab308; }
+    .btn-outline {
+      border: 1px solid #fff;
+      color: #fff;
+      margin-left: 8px;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+    section {
+      padding: 50px 15px;
+      background: #f5f5f5;
+    }
+    section:nth-of-type(even) { background: #ffffff; }
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    h3 {
+      font-size: 1.6rem;
+      margin-bottom: 20px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 18px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+    .card h4 {
+      margin-bottom: 8px;
+      font-size: 1.1rem;
+    }
+    .card p { font-size: 0.95rem; }
+
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .badge {
+      background: #e5e7eb;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 0.8rem;
+    }
+
+    .prices {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+    }
+    .price-highlight {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #2563eb;
+      margin-bottom: 6px;
+    }
+
+    .testimonial {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+    .testimonial span {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1.5fr);
+      gap: 25px;
+    }
+    form label {
+      display: block;
+      font-size: 0.9rem;
+      margin-bottom: 4px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px 10px;
+      border-radius: 6px;
+      border: 1px solid #d1d5db;
+      margin-bottom: 12px;
+      font-family: inherit;
+      font-size: 0.95rem;
+    }
+    form textarea { min-height: 110px; resize: vertical; }
+
+    footer {
+      background: #111827;
+      color: #9ca3af;
+      padding: 20px 15px;
+      font-size: 0.85rem;
+    }
+    footer .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    @media (max-width: 800px) {
+      .hero .container,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+      header .container {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .btn-outline { margin-left: 0; margin-top: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <h1>Umzugsservice Siegen</h1>
+    <nav>
+      <a href="#leistungen">Leistungen</a>
+      <a href="#preise">Preise</a>
+      <a href="#gebiet">Einsatzgebiet</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div>
+      <h2>Umzug geplant? Wir packen an.</h2>
+      <p>Professionelle Umzugshelfer aus Siegen – schnell, freundlich und zuverlässig. Ob kleiner Transport oder kompletter Wohnungsumzug: Wir machen Ihren Umzug stressfrei.</p>
+      <ul>
+        <li>Privat- & Firmenumzüge</li>
+        <li>Starke Helfer, Möbelmontage & Transport</li>
+        <li>Faire Preise & kurzfristige Termine</li>
+      </ul>
+      <a href="#kontakt" class="btn btn-primary">Jetzt unverbindlich anfragen</a>
+      <a href="#preise" class="btn btn-outline">Preise ansehen</a>
+    </div>
+    <div>
+      <div class="card">
+        <h4>Schnellanfrage</h4>
+        <p>Schreiben Sie uns kurz Datum, Start- & Zieladresse und Umfang – wir melden uns schnell mit einem Angebot.</p>
+        <p><strong>Telefon:</strong> <span>+49&nbsp;123&nbsp;456789</span></p>
+        <p><strong>WhatsApp:</strong> <span>+49&nbsp;123&nbsp;456789</span></p>
+        <p><strong>E-Mail:</strong> <span>info@umzug-siegen.de</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="leistungen">
+  <div class="section-inner">
+    <h3>Unsere Leistungen</h3>
+    <div class="grid-3">
+      <div class="card">
+        <h4>Privatumzüge</h4>
+        <p>Vom 1‑Zimmer‑Apartment bis zum Einfamilienhaus – wir planen und tragen Ihren Umzug strukturiert und sorgfältig.</p>
+      </div>
+      <div class="card">
+        <h4>Firmenumzüge</h4>
+        <p>Schnelle, organisierte Umzüge für Büros und kleine Unternehmen, damit der Betrieb möglichst ohne Ausfall weiterläuft.</p>
+      </div>
+      <div class="card">
+        <h4>Umzugshelfer</h4>
+        <p>Sie haben einen Transporter, brauchen aber starke Hände? Unsere Helfer können stundenweise gebucht werden.</p>
+      </div>
+      <div class="card">
+        <h4>Möbelmontage</h4>
+        <p>Abbau und Aufbau von Schränken, Betten & Regalen – sauber und fachgerecht.</p>
+      </div>
+      <div class="card">
+        <h4>Transportservice</h4>
+        <p>Einzelne Möbelstücke, Haushaltsgeräte oder kleinere Transporte – sicher und gut gesichert.</p>
+      </div>
+      <div class="card">
+        <h4>Entrümpelung</h4>
+        <p>Keller, Garage oder komplette Wohnung – wir räumen und entsorgen fachgerecht.</p>
+      </div>
+    </div>
+
+    <div class="badge-list">
+      <span class="badge">Pünktlich</span>
+      <span class="badge">Zuverlässig</span>
+      <span class="badge">Erfahren seit 2023</span>
+      <span class="badge">Faire Festpreise</span>
+    </div>
+  </div>
+</section>
+
+<section id="gebiet">
+  <div class="section-inner">
+    <h3>Einsatzgebiet</h3>
+    <p>Wir sind im gesamten Raum <strong>Siegen</strong> und Umgebung unterwegs:</p>
+    <ul style="margin-left:18px; margin-top:8px;">
+      <li>Siegen, Kreuztal, Netphen, Neunkirchen</li>
+      <li>Olpe, Betzdorf und weitere Orte nach Absprache</li>
+    </ul>
+  </div>
+</section>
+
+<section id="preise">
+  <div class="section-inner">
+    <h3>Preise</h3>
+    <div class="prices">
+      <div class="card">
+        <div class="price-highlight">Umzugshelfer ab 25 € / Std</div>
+        <p>Ideal, wenn Sie bereits einen Transporter haben und nur Unterstützung beim Tragen benötigen.</p>
+      </div>
+      <div class="card">
+        <div class="price-highlight">Transporte ab 39 €</div>
+        <p>Für einzelne Möbelstücke, Geräte oder kleinere Umzüge innerhalb der Region.</p>
+      </div>
+      <div class="card">
+        <div class="price-highlight">Komplettumzug – Festpreis</div>
+        <p>Nach kurzer Besichtigung oder Beschreibung machen wir Ihnen ein faires Festpreisangebot.</p>
+      </div>
+    </div>
+    <p style="margin-top:15px; font-size:0.9rem; color:#555;">
+      Alle Preise sind Richtwerte und abhängig von Strecke, Etage, Umfang und Aufwand. Fragen Sie einfach unverbindlich an.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="section-inner">
+    <h3>Was Kunden über uns sagen</h3>
+    <div class="grid-3">
+      <div class="card">
+        <p class="testimonial">„Schnell, freundlich, zuverlässig – unser Umzug war viel entspannter als erwartet.“</p>
+        <span>– Familie K., Siegen</span>
+      </div>
+      <div class="card">
+        <p class="testimonial">„Top Preis‑Leistung. In wenigen Stunden war alles im neuen Büro.“</p>
+        <span>– Inhaber eines kleinen Unternehmens</span>
+      </div>
+      <div class="card">
+        <p class="testimonial">„Sehr spontan eingesprungen, super Helfer, alles ohne Schäden.“</p>
+        <span>– Student, Kreuztal</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="section-inner">
+    <h3>Kontakt & Anfrage</h3>
+    <div class="contact-grid">
+      <div>
+        <p><strong>Telefon:</strong> +49&nbsp;123&nbsp;456789</p>
+        <p><strong>WhatsApp:</strong> +49&nbsp;123&nbsp;456789</p>
+        <p><strong>E-Mail:</strong> info@umzug-siegen.de</p>
+        <p style="margin-top:10px;">
+          Schreiben Sie uns kurz:
+        </p>
+        <ul style="margin-left:18px; margin-top:5px;">
+          <li>Ihr Name</li>
+          <li>Datum des Umzugs</li>
+          <li>Start- & Zieladresse</li>
+          <li>Etage, Aufzug, Umfang (Zimmer, Möbel etc.)</li>
+        </ul>
+        <p style="margin-top:10px;">Wir melden uns so schnell wie möglich mit einem Angebot.</p>
+      </div>
+      <div>
+        <form>
+          <label for="name">Name</label>
+          <input id="name" type="text" placeholder="Ihr Name" />
+
+          <label for="email">E-Mail oder Telefonnummer</label>
+          <input id="email" type="text" placeholder="E-Mail oder Handy" />
+
+          <label for="date">Umzugsdatum</label>
+          <input id="date" type="date" />
+
+          <label for="message">Nachricht</label>
+          <textarea id="message" placeholder="Kurz den Umfang beschreiben (Zimmer, Etage, Start/Ziel)..."></textarea>
+
+          <button type="submit" class="btn btn-primary">Anfrage senden</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div>© <span id="year"></span> Umzugsservice Siegen – Alle Rechte vorbehalten.</div>
+    <div>Impressum | Datenschutz (Platzhalter)</div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
